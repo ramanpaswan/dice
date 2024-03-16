@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+#play {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 80vw;
+}
+
+#play div img {
+    height: 300px;
+    width: 300px;
+}
+
+button {
+    height: 100px;
+    width: 200px;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+}
+
+.contanar {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;}

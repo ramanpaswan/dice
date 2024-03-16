@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contanar">
+        <h1 id="result">Get Start</h1>
+        <div id="play">
+            <div class="player1">
+                <h1>player1</h1>
+                <img src="img/dice1.png" id="img1">
+            </div>
+            <div class="player2">
+
+                <h1>player2</h1>
+                <img src="img/dice6.png" id="img2">
+            </div>
+ 
+        </div>
+        <button id="button" onclick="myfun()">Start</button>
+    </div>
+    <script>
+        function myfun() {
+            document.getElementById("button").innerHTML="Play Again";
+            let player1 = Math.ceil(Math.random()*6);
+            document.getElementById('img1').setAttribute('src',`img/dice${player1}.png`);
+
+            let player2 = Math.ceil(Math.random()*6);
+            document.getElementById('img2').setAttribute('src',`img/dice${player2}.png`);
+            
+            if (player1>player2) {
+                document.getElementById('result').innerHTML = "Player 1 Won";
+            }
+            else if (player1<player2) {
+                document.getElementById('result').innerHTML = "Player 2 Won";
+            }
+            else{
+                document.getElementById('result').innerHTML = "Tie";
+
+            }
+                
+        }
+        
+    </script>
+</body>
+
+</html>
